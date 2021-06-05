@@ -1,0 +1,7 @@
+IMG_NAME="WeatherStation"
+TARGET_HOSTNAME="WeatherStation"
+WPA_ESSID="Namib"
+WPA_PASSWORD="NamibTest"
+WPA_COUNTRY="DE"
+ENABLE_SSH=1
+USE_QCOW2=1
