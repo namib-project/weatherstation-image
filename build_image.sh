@@ -6,7 +6,6 @@ touch ./stage4/SKIP_IMAGES ./stage5/SKIP_IMAGES
 mkdir -p ./stage2/04-namib/files
 mkdir -p ./stage2/04-namib/flows
 cp ../to_display.py stage2/04-namib/files/
-cp ../dummy.json stage2/04-namib/files/
 cp ../flows_WeatherStation.json stage2/04-namib/flows
 cp ../settings.js stage2/04-namib/flows
 cp ../changeCredentials.sh stage2/04-namib/files/
