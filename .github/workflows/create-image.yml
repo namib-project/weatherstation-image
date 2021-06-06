@@ -1,0 +1,30 @@
+name: Build Raspberry Pi OS Image
+
+on:
+  push:
+    tags:
+    - 'v*'
+
+  workflow_dispatch:
+
+jobs:
+  build_image:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: recursive
+  
+      - name: Build Image
+        run: sudo ./build_image.sh
+
+      - name: Release
+        uses: docker://antonyurchenko/git-release:latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DRAFT_RELEASE: "false"
+          PRE_RELEASE: "false"
+          ALLOW_TAG_PREFIX: "true"
+        with:
+          args: |
+              pi-gen/deploy/*-lite.zip
