@@ -1,11 +1,9 @@
-name: Build Raspberry Pi OS Image
+name: Build Status
 
 on:
   push:
-    tags:
-    - 'v*'
-
-  workflow_dispatch:
+    branches:
+      - master
 
 jobs:
   build_image:
@@ -17,14 +15,3 @@ jobs:
   
       - name: Build Image
         run: sudo ./build_image.sh
-
-      - name: Release
-        uses: docker://antonyurchenko/git-release:latest
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DRAFT_RELEASE: "false"
-          PRE_RELEASE: "false"
-          ALLOW_TAG_PREFIX: "true"
-        with:
-          args: |
-              pi-gen/deploy/*-lite.zip
