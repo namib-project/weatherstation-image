@@ -14,7 +14,7 @@ As the logic of the weather station is realized with Node-RED it can be easily a
 
 ## Login into the Node-RED editor
 
-The Node-RED editor is accessible from the browser via `weatherstation.local:1880` or `<IP address>:1880>`.
+The Node-RED editor is accessible from the browser via `weatherstation.local:1880` or `<IP address>:1880`.
 It is password protected.
 The default credentials are:
 
