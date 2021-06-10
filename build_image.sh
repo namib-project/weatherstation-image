@@ -32,7 +32,7 @@ npm install mcollina/node-coap
 npm install node-red-contrib-coap
 npm install node-red-dashboard
 npm install node-red-node-ui-table
-npm install JKRhb/node-red-contrib-wot-discovery
+npm install node-red-contrib-wot-discovery
 EOL
 
 cat > ./stage2/04-namib/01-run.sh << EOL
